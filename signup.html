@@ -17,6 +17,7 @@
     <!--Responsive_css-->
     <link rel="stylesheet" href="css/responsive.css"/>
     <link rel="stylesheet" href="css/fontawesome.min.css">
+    
 </head>
 <body class="sub_page">
 
@@ -31,7 +32,7 @@
                         
                     </a>
                   </div>
-                  <form action="" class="sazid_search_form" style="min-width: auto;">
+                  <form action="php/signup.php" class="sazid_search_form" style="min-width: auto;" method="post">
                   <div class="sazid_search"> 
                     <input type="text" class="sazid_search_input" placeholder="search books.." name="keywords">
                    </div>
@@ -93,15 +94,12 @@
   	  	<div class="register-box-body">
     	<p class="login-box-msg">Register a new membership</p>
 
-    	<form action="register.php" method="POST">
+    	<form action="php/signup.php" method="POST">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" name="firstname" placeholder="Firstname" value="" required>
             
           </div>
-          <div class="form-group has-feedback">
-            <input type="text" class="form-control" name="lastname" placeholder="Lastname" value=""  required>
-           
-          </div>
+          
       		<div class="form-group has-feedback">
         		<input type="email" class="form-control" name="email" placeholder="Email" value="" required>
         	
@@ -115,10 +113,7 @@
             
           </div>
           
-                <di class="form-group" style="width:100%;">
-                  <div class="g-recaptcha" data-sitekey="6LevO1IUAAAAAFX5PpmtEoCxwae-I8cCQrbhTfM6"></div>
-                </di>
-                        <hr>
+                
       		<div class="row">
     			<div class="col-xs-4">
           			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signup"> Sign Up</button>
