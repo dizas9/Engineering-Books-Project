@@ -14,16 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nameErr = "Only letters and white space allowed";
     }
   }
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["lastname"])) {
-      $nameErr = "lastname is required";
-    } else {
-      $lastname = test_input($_POST["lastname"]);
-      // check if name only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
-        $nameErr = "Only letters and white space allowed";
-      }
-    }
+ 
   
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
@@ -46,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $repassword = "";
   } else {
     $repassword = test_input($_POST["repassword"]);
-  }}}
+  }}
 $conn = new mysqli('localhost','root','','projectDB');
 
-$stmt = $conn->prepare("insert into signup(firstname,lastname,email,password,repassword) values(?, ?, ?, ?, ?)");
-$stmt->bind_param("sssii", $firstname,$lastname,$email,$password,$repassword);
+$stmt = $conn->prepare("insert into signup(firstname,email,password,repassword) values(?, ?, ?, ?)");
+$stmt->bind_param("ssii", $firstname,$email,$password,$repassword);
 $stmt->execute();
 
 echo "Registration successfully...";
