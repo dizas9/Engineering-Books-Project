@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,6 @@
     <!--Responsive_css-->
     <link rel="stylesheet" href="css/responsive.css"/>
     <link rel="stylesheet" href="css/fontawesome.min.css">
-    
 </head>
 <body class="sub_page">
 
@@ -32,7 +32,7 @@
                         
                     </a>
                   </div>
-                  <form action="php/signup.php" class="sazid_search_form" style="min-width: auto;" method="post">
+                  <form action="" class="sazid_search_form" style="min-width: auto;">
                   <div class="sazid_search"> 
                     <input type="text" class="sazid_search_input" placeholder="search books.." name="keywords">
                    </div>
@@ -69,8 +69,8 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link " href="#">Account</a>
                     <div class="dropdown-content">
-                      <a href="login.html">Already a member?Login</a>
-                      <a href="signup.html">SignUp</a>
+                      <a href="login.php">Already a member?Login</a>
+                      <a href="signup.php">SignUp</a>
                       <br>
                     </div>
                    </li>
@@ -90,51 +90,42 @@
                 </nav>
                 </div>
         </header>         
-<div class="register-box" style="margin-left: 188px; margin-right: 200px;">
-  	  	<div class="register-box-body">
-    	<p class="login-box-msg">Register a new membership</p>
-
-    	<form action="php/signup.php" method="POST">
-          <div class="form-group has-feedback">
-            <input type="text" class="form-control" name="firstname" placeholder="Firstname" value="" required>
-            
-          </div>
-          
-      		<div class="form-group has-feedback">
-        		<input type="email" class="form-control" name="email" placeholder="Email" value="" required>
-        	
-      		</div>
-          <div class="form-group has-feedback">
-            <input type="password" class="form-control" name="password" placeholder="Password" required>
-         
-          </div>
-          <div class="form-group has-feedback">
-            <input type="password" class="form-control" name="repassword" placeholder="Retype password" required>
-            
-          </div>
-          
-                
-      		<div class="row">
-    			<div class="col-xs-4">
-          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signup"> Sign Up</button>
-        		</div>
-      		</div>
-    	</form>
-      <br>
-      <a href="login.html">I already have a membership</a><br>
-      <a href="dizas.html"> Home</a>
-  	</div>
-</div>
- <!-- footer section -->
- <footer class="footer_section">
+  <div class="login-box" style="margin-right: 321px; margin-left: 263px;">
+          <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+  
+        <form action="login.php" method="POST">
+        <?php include('errors.php'); ?>
+            <div class="form-group has-feedback">
+              <input type="text" class="form-control" name="username" placeholder="Username" required>
+              
+            </div>
+            <div class="form-group has-feedback">
+              <input type="password" class="form-control" name="password" placeholder="Password" required>
+              
+            </div>
+            <div class="row">
+            <div class="col-xs-4">
+                  <button type="submit" class="btn btn-primary btn-block btn-flat" name="login_user"> Sign In</button>
+              </div>
+            </div>
+        </form>
+        <br>
+        <a href="password_forgot.php">I forgot my password</a><br>
+        <a href="signup.php" class="text-center">Register a new membership</a><br>
+        <a href="dizas.php"> Home</a>
+      </div>
+  </div>
+    
+      <!-- footer section -->
+  <footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://protfolio.html">Id 19105003 & 19105021 </a>
+        <a href="https://html.design/">Id 19105003 & 19105021 </a>
       </p>
     </div>
   </footer>
   <!-- footer section -->
-	
 </body>
 </html>
