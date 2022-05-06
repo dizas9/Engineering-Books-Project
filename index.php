@@ -71,7 +71,7 @@
                     <a class="nav-link "  href="categories.html"> Categories <span class="sr-only"></span> </a>
                     <div class="dropdown-content">
                       <a href="#">CSE</a><br>
-                      <a href="ice.html">ICE</a><br>
+                      <a href="index2.php">ICE</a><br>
                       <a href="#">EEE</a><br>
                       <a href="#">CIVIL</a><br>
                       <a href="#">ME</a><br>
@@ -80,7 +80,7 @@
                   </li>
                   
                   <li class="nav-item dropdown">
-                    <a class="nav-link " href="#">Account</a>
+                    <a class="nav-link " href="index.php">Account</a>
                     <div class="dropdown-content">
                       <a href="login.php">Already a member?Login</a>
                       <a href="signup.php">SignUp</a>
@@ -88,7 +88,7 @@
                     </div>
                    </li>
                    <li class="nav-item">
-                    <a href="" style="padding-top: 100px;">
+                    <a href="cart.php" style="padding-top: 100px;">
                       <img src="https://rails-assets-us.bookshop.org/assets/basket-7f87243784551efd10fff73d50bd0d2e014dfc075f31d6f1bf2de0cd9e1c3be3.svg" alt="" style="margin-right: 30px;">
                     </a>
                     </li>
